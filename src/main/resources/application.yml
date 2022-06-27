@@ -1,3 +1,7 @@
 micronaut:
   application:
     name: inviter
+
+#  http:
+#    client:
+#      log-level: DEBUG

@@ -12,3 +12,6 @@ out/
 .settings
 .classpath
 .factorypath
+
+# Ignore dev config
+application-cli.yml
