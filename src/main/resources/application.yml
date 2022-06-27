@@ -2,6 +2,11 @@ micronaut:
   application:
     name: inviter
 
-#  http:
-#    client:
-#      log-level: DEBUG
+  http:
+    client:
+#      log-level: INFO
+      read-idle-timeout: 60s
+      read-timeout: 60s
+
+jackson:
+  property-naming-strategy: SNAKE_CASE
