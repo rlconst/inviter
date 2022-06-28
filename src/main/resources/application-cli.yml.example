@@ -1,0 +1,11 @@
+client:
+  domain: "https://DOMAIN.us.auth0.com"
+  audience: "${client.domain}/api/v2/"
+  id: "ALPHA-NUMERIC-APPLICATION-ID"
+  secret: "APPLICATION-SECRET"
+  connection: "NAME-NOT-ID-OF-USER-DB"
+
+# Role names will be transformed to lowercase anyway
+roles:
+  user: rol_abcdefgh12345678
+  admin: rol_12345678abcdefgh

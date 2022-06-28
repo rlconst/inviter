@@ -11,6 +11,16 @@ Unfortunately organization invite flow is [broken](https://community.auth0.com/t
 
 `./gradlew build`
 
+# Configure
+
+* Copy application-cli.yml.example file and rename as application-cli.yml
+* Go to auth0 management and fill CAPITALIZED params 
+
+Application should
+* have **client-credentials** flow enabled 
+* be authorized in standard **Auth0 Management API**
+* have following grants: `create:users`, `create:role_members`, `create:organization_members`,
+
 # Usage
 
 ```
