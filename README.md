@@ -1,14 +1,26 @@
-## Micronaut 3.5.2 Documentation
+# Invite users to organization on Auth0
 
-- [User Guide](https://docs.micronaut.io/3.5.2/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.5.2/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.5.2/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+Unfortunately organization invite flow is [broken](https://community.auth0.com/t/organization-invitation-flow/85868). This is a dirty and ad-hoc workaround consist of following steps:
 
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature http-client documentation
+1. Create user with random password
+2. Addign roles
+3. Invite to organization
+4. Reset password
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+# Build
 
+`./gradlew build`
 
+# Usage
+
+```
+Usage: inviter [-hV] -e=<email> -n=<name> -o=<organization> -r=<roles>... [-r=<roles>...]...
+...
+  -e, --email=<email>      User email to send invite e.g. jdoe@example.com
+  -h, --help               Show this help message and exit.
+  -n, --name=<name>        User name e.g. John Doe
+  -o, --organization=<organization>
+                           Organization ids org_abcdefgh
+  -r, --roles=<roles>...   Roles e.g. user
+  -V, --version            Print version information and exit.
+```
